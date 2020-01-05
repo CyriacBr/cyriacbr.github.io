@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Rubik", sans-serif;
+  font-family: "Raleway", sans-serif; */
+  color: #0e305b;
+  background: rgb(251, 252, 253);
+  background: #f7f7f7;
+  background: #171c28;
+  color: white;
+
+  background: rgb(251, 252, 253);
+  color: #333;
+}
+
+.page-layout {
+  width: 100%;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .page-layout {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-layout {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-layout {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-layout {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .page-layout {
+    overflow-x: hidden;
+    padding: 0;
+  }
+}
+
+.highlighted {
+  color: #2179f2 !important;
+  font-weight: 500;
+}
+
+.highlighted2::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 60%;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 0;
+  transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  background-color: #2179f250;
+}
+
+ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.underlined {
+  display: inline;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 65%,
+    #2179f250 65%
+  );
+}
