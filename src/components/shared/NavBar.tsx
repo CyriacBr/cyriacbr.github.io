@@ -40,7 +40,7 @@ const Layout = styled.div`
       opacity: 0.5;
     }
 
-    span {
+    .nbr {
       font-weight: 600;
       color: ${props => props.theme.colors.primary};
     }
@@ -61,7 +61,7 @@ const Logo = styled.div`
   font-family: "Anton", sans-serif;
   display: flex;
   align-items: center;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 100;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   color: ${props => props.theme.colors.primary};
@@ -69,7 +69,7 @@ const Logo = styled.div`
   .initials {
     font-family: poppins;
     position: relative;
-    top: 4px;
+    top: 2px;
     font-weight: 700;
   }
 `;
@@ -80,26 +80,28 @@ const NavBar: React.FC = () => {
   return (
     <Container>
       <Layout className="page-layout">
-        <Logo>
-          <span>{`<`}</span>
-          <span className="initials">CB</span>
-          <span>{`/>`}</span>
-        </Logo>
+        <a href="/">
+          <Logo>
+            <span>{`<`}</span>
+            <span className="initials">CB</span>
+            <span>{`/>`}</span>
+          </Logo>
+        </a>
         <nav>
           <ul>
             <li>
               <a href="#">
-                <span>01.</span> About Me
+                <span className="nbr">01.</span> About Me
+              </a>
+            </li>
+            <li>
+              <a href="blog">
+                <span className="nbr">02.</span> Blog
               </a>
             </li>
             <li>
               <a href="#">
-                <span>02.</span> Blog
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>03.</span> Get In Touch
+                <span className="nbr">03.</span> Get In Touch
               </a>
             </li>
             <li>
