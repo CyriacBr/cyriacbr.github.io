@@ -12,14 +12,13 @@ const H1 = styled.span`
   font-weight: 700;
 
   position: relative;
-  color: #2179f2;
-  color: #454545;
+  color: ${({ theme }) => theme.colors.primary};
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 2em;
   }
 `;
 const H1Element: React.FC = ({ children, ...props }) => (
-  <H1 className="underlined" {...props}>{children}</H1>
+  <H1 {...props}>{children}</H1>
 );
 
 const P = styled.p`
@@ -38,25 +37,6 @@ const A = styled.a`
   text-decoration: none;
   font-weight: 500;
   white-space: pre;
-
-  :after {
-    display: none;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 60%;
-    left: -0.1em;
-    right: -0.1em;
-    bottom: 0;
-    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-    background-color: #2179f250;
-  }
-
-  &:hover {
-    :after {
-      top: 0%;
-    }
-  }
 `;
 const AElement: React.FC = ({ children, ...props }) => (
   <A {...props}>{children}</A>
@@ -64,22 +44,8 @@ const AElement: React.FC = ({ children, ...props }) => (
 
 const Strong = styled.strong`
   position: relative;
-  /* color: #2179f2; */
   font-weight: 500;
   white-space: pre;
-
-  :after {
-    display: none;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 60%;
-    left: -0.1em;
-    right: -0.1em;
-    bottom: 0;
-    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-    background-color: #2179f250;
-  }
 `;
 const StrongElement: React.FC = ({ children, ...props }) => (
   <Strong {...props}>{children}</Strong>

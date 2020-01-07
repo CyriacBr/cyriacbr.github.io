@@ -17,9 +17,8 @@ const s = {
   `,
   AboutSection: styled.div``,
   SkillsSection: styled.div`
-    background-color: #06205d;
-
-    background: #0085ff;
+    z-index: 1;
+    background: ${({ theme }) => theme.colors.primary};
     @media (min-width: 320px) and (max-width: 480px) {
       margin: -1em;
       padding: 1em;
@@ -29,20 +28,14 @@ const s = {
     p {
       color: white;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-
-      .highlighted {
-        color: #2179f2;
-      }
     }
 
     :after {
-      /* display: none; */
       content: "";
       position: absolute;
       z-index: -1;
       bottom: 0%;
       transform: translateY(50px);
-      /* background-color: #2179f2; */
       background-image: url(wave5.svg);
       background-size: 100% 70px;
       position: absolute;
@@ -54,7 +47,6 @@ const s = {
     }
 
     :before {
-      /* display: none; */
       content: "";
       z-index: -1;
       background-image: url(wave2.svg);

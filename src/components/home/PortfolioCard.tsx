@@ -4,7 +4,6 @@ import VanillaTilt from 'vanilla-tilt';
 
 const Container = styled.div`
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
 
   .header {

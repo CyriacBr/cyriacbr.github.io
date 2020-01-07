@@ -103,7 +103,8 @@ const Container = styled.div`
     height: 3px;
     width: 50px;
     border: 0;
-    background-color: #0085ff;
+
+    background-color: ${({ theme }) => theme.colors.primary};
     margin: 0;
     margin-bottom: 1em;
   }
@@ -114,7 +115,7 @@ const Container = styled.div`
   }
 
   .tag-item {
-    background: #0085ff;
+    background: ${({ theme }) => theme.colors.primary};
     color: white;
     font-weight: 600;
     padding: 0.25em;
@@ -200,7 +201,9 @@ const Project: React.FC<{ project: ProjectItem }> = ({ project }) => {
           <hr />
           <div className="tags">
             {project.tags.map(t => (
-              <span className="tag-item" key={t}>{t}</span>
+              <span className="tag-item" key={t}>
+                {t}
+              </span>
             ))}
           </div>
           <p className="desc">{project.desc}</p>

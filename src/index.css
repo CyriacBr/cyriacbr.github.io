@@ -3,16 +3,6 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  /* font-family: "Rubik", sans-serif;
-  font-family: "Raleway", sans-serif; */
-  color: #0e305b;
-  background: rgb(251, 252, 253);
-  background: #f7f7f7;
-  background: #171c28;
-  color: white;
-
-  background: rgb(251, 252, 253);
-  color: #333;
 }
 
 .page-layout {
