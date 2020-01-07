@@ -1,17 +1,7 @@
 import { NextPage } from "next";
 import styled from "styled-components";
-import { NavBar } from "../components/shared/NavBar";
 import { Sections } from "../components/home/Sections";
-import '../index.css';
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  background: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.text};
-`;
+import { PageLayout } from "../components/shared/PageLayout";
 
 export interface HomeProps {
   sections: {
@@ -22,11 +12,9 @@ export interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ sections }) => (
-  <Container>
-    <NavBar />
-    <br />
+  <PageLayout>
     <Sections sections={sections} />
-  </Container>
+  </PageLayout>
 );
 
 Home.getInitialProps = async function(context) {
