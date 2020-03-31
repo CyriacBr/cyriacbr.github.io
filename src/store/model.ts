@@ -6,7 +6,7 @@ export interface StoreModel {
 }
 
 const storeModel: StoreModel = {
-  darkMode: false,
+  darkMode: true,
   setDarkMode: action((state, value) => {
     state.darkMode = value;
   })
