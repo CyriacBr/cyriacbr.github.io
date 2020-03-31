@@ -6,10 +6,15 @@ public_folder: img
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "_posts"
+    folder: "../../src/data/blogPosts"
+    extension: json
+    format: json
     create: true
+    slug: "{{fields.slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Slug", name: "slug", widget: "string" }

@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
 import { Sections } from "../components/home/Sections";
 import { PageLayout } from "../components/shared/PageLayout";
@@ -17,17 +17,19 @@ const Home: NextPage<HomeProps> = ({ sections }) => (
   </PageLayout>
 );
 
-Home.getInitialProps = async function(context) {
+export const getStaticProps: GetStaticProps = async function(context) {
   const about = (await import(`../data/portfolio/About-en.md`)).default;
   const skills = (await import(`../data/portfolio/Skills-en.md`)).default;
   const projects = (await import(`../data/portfolio/Projects-en.md`)).default;
   return {
-    sections: {
-      about,
-      skills,
-      projects
-    }
-  } as HomeProps;
+    props: {
+      sections: {
+        about,
+        skills,
+        projects
+      }
+    } as HomeProps
+  };
 };
 
 export default Home;

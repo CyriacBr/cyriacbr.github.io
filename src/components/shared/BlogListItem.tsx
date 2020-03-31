@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Post } from "../../pages/blog";
 import dayjs from "dayjs";
+import { BlogPost } from "../../data/helper";
 
 const Container = styled.div`
   display: flex;
@@ -76,25 +76,23 @@ export interface PostData {
 }
 
 interface BlogListItemProps {
-  post: Post;
+  post: BlogPost;
 }
 
 const BlogListItem: React.FC<BlogListItemProps> = ({ post }) => {
-  const data = (post.document.data as any) as PostData;
-  console.log("data :", data);
   const displayDate = () => {
-    return dayjs(data.date).format("DD MMMM YYYY");
+    return dayjs(post.date).format("DD MMMM YYYY");
   };
 
   return (
     <Container>
       <img src="https://picsum.photos/300/125" alt="" />
       <Content>
-        <span className="title">{data.title}</span>
-        <p className="desc">{data.desc}</p>
+        <span className="title">{post.title}</span>
+        <p className="desc">{post.description}</p>
         <div className="footer"> 
-          <span className="category">{data.category}</span>
-          <span>{displayDate()}</span>
+          {/* <span className="category">{post.category}</span>
+          <span>{displayDate()}</span> */}
         </div>
       </Content>
     </Container>

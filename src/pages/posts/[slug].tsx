@@ -1,32 +1,28 @@
-import { NextPage } from "next";
-import styled from "styled-components";
-import { Post } from "../blog.jsx";
-import { PageLayout } from "../../components/shared/PageLayout.jsx";
-import matter from "gray-matter";
+import { NextPage, GetStaticProps } from "next";
+import { PageLayout } from "../../components/shared/PageLayout";
+import { getBlogPosts, BlogPost } from "../../data/helper";
 
 export interface PostPageProps {
-  post: Post;
+  post: BlogPost;
 }
 
 const PostPage: NextPage<PostPageProps> = ({ post }) => (
-  <PageLayout>
-    
-  </PageLayout>
+  <PageLayout></PageLayout>
 );
 
-PostPage.getInitialProps = async function(context) {
-  // context contains the query param
-  const { slug } = context.query
-  // grab the file in the posts dir based on the slug
-  const content = await import(`../../data/blog/${slug}.md`)
-  // also grab the config file so we can pass down siteTitle
-  const data = matter(content.default);
+export const getStaticProps: GetStaticProps = async context => {
+  const { slug } = context.params;
+  const post = getBlogPosts().find(v => v.slug === slug);
   return {
-    post: {
-      document: data,
-      slug
-    } as Post
+    props: {
+      post
+    }
   };
 };
+
+export async function getStaticPaths() {
+  const paths = getBlogPosts().map(post => `/posts/${post.slug}`);
+  return { paths, fallback: false };
+}
 
 export default PostPage;
