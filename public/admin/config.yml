@@ -1,6 +1,6 @@
 backend:
   name: test-repo #git-gateway
-  branch: master
+  branch: next
 media_folder: public/img
 public_folder: img
 collections:
