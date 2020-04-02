@@ -8,15 +8,6 @@ fields:
   config:
     required: false
   label: Title
-- name: body
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Body
 - name: date
   type: datetime
   label: Date
