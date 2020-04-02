@@ -1,6 +1,6 @@
 ---
 title: Test blog
-date: 2020-04-01T23:00:00Z
+date: 04/01/2020 11:00 PM +0000
 picture: "/public/media/61-800x400.jpg"
 
 ---
