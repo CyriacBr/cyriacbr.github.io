@@ -17,5 +17,10 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: picture
+  type: file
+  config:
+    maxSize: 250
+  label: Picture
 pages:
 - src/data/blogPosts/test-blog.md
