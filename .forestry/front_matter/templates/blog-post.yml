@@ -13,11 +13,12 @@ fields:
   label: Date
   description: ''
   config:
-    required: false
+    required: true
     date_format: 
     time_format: 
     display_utc: false
-    export_format: MM/DD/YYYY h:mm A ZZ
+    export_format: ''
+  default: now
 - name: picture
   type: file
   config:
