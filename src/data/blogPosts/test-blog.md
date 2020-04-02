@@ -1,6 +1,7 @@
 ---
 title: Test blog
 date: 2020-04-01T23:00:00Z
+picture: "/public/media/61-800x400.jpg"
 
 ---
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet perspiciatis sed veritatis, 
