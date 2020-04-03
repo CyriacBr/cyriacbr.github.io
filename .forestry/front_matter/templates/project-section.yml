@@ -1,4 +1,14 @@
 ---
 label: Project Section
-hide_body: true
-fields: []
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: picture
+  type: file
+  config:
+    maxSize: 250
+  label: Picture
