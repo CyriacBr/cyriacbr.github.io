@@ -1,4 +1,49 @@
 ---
 label: Project
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: thumbnail
+  type: file
+  config:
+    maxSize: 250
+  label: Thumbnail
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Description
+- name: main_image
+  type: file
+  config:
+    maxSize: 250
+  label: Main Image
+- name: year
+  type: text
+  config:
+    required: false
+  label: Year
+- name: type
+  type: text
+  config:
+    required: false
+  label: Type
+- name: carousel_images
+  type: image_gallery
+  config: {}
+  label: Carousel Images
+- name: sections
+  type: blocks
+  label: Sections
+  template_types: []
+  config:
+    min: 
+    max: 
