@@ -1,6 +1,6 @@
 ---
 label: Project Section
-hide_body: false
+hide_body: true
 fields:
 - name: title
   type: text
@@ -12,3 +12,12 @@ fields:
   config:
     maxSize: 250
   label: Picture
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
