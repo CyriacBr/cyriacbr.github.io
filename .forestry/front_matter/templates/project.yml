@@ -43,7 +43,8 @@ fields:
 - name: sections
   type: blocks
   label: Sections
-  template_types: []
+  template_types:
+  - project-section
   config:
     min: 
     max: 
