@@ -48,3 +48,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- src/data/projects/ide-4-0.md
